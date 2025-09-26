@@ -1,23 +1,13 @@
 package br.com.joaocarloslima;
 
-public class Batata {
-    private int tamanho = 1;
-    private int tempoDeVida;
-    private int tempoDeCrescimento;
+public class Batata extends Planta {
 
-    public void crescer() {
-        tempoDeVida++;
-        if (tamanho < 4 && tempoDeCrescimento % tempoDeVida == 0) {
-            tamanho++;
-        }
+    public Batata(int tempoDeCrescimento) {
+        super(tempoDeCrescimento);
     }
 
-    public Boolean podeColher() {
-        return tamanho == 4;
-    }
-
+    @Override
     public String getImagem() {
-        return "images/morango" + tamanho + ".png";
+        return "images/batata" + tamanho + ".png";
     }
-
 }
