@@ -1,23 +1,13 @@
 package br.com.joaocarloslima;
 
-public class Morango {
-    private int tamanho;
-    private int tempoDeVida;
-    private int tempoDeCrescimento;
+public class Morango extends Planta {
 
-    public void crescer() {
-        tempoDeVida++;
-        if (tamanho < 4 && tempoDeCrescimento % tempoDeVida == 0) {
-            tamanho++;
-        }
+    public Morango(int tempoDeCrescimento) {
+        super(tempoDeCrescimento);
     }
 
-    public Boolean podeColher() {
-        return tamanho == 4;
-    }
-
+    @Override
     public String getImagem() {
         return "images/morango" + tamanho + ".png";
     }
-
 }
